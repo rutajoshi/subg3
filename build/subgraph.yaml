@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Subg3Contract
@@ -18,7 +18,7 @@ dataSources:
         - TokenCreated
       abis:
         - name: Subg3Contract
-          file: ./abis/Subg3Contract.json
+          file: Subg3Contract/abis/Subg3Contract.json
       eventHandlers:
         - event: ImplementationUpdated(address)
           handler: handleImplementationUpdated
@@ -26,4 +26,4 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: TokenCreated(address,string,string,uint256)
           handler: handleTokenCreated
-      file: ./src/mapping.ts
+      file: Subg3Contract/Subg3Contract.wasm
